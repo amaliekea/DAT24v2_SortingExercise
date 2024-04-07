@@ -19,8 +19,9 @@ public class SortPeopleByComparator {
                 Person person : people) {
             System.out.println(person);
         }
-        Collections.sort(people, new LastNameComparator());
-        System.out.println("Sorteret liste af personer på baggrund af efternavn:");
+        people.sort(Person.COMPARATOR);
+        //Collections.sort(people, new LastNameComparator());
+        System.out.println("\nSorteret liste af personer på baggrund af efternavn:");
         for (
                 Person person : people) {
             System.out.println(person);

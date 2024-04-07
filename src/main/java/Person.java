@@ -1,6 +1,10 @@
 import java.util.Comparator;
 
 public class Person implements Comparable <Person> {
+
+    public static Comparator<Person> COMPARATOR = Comparator.comparing(Person::getLastName)
+            .thenComparing(Person::getAge);
+
     private String firstName;
     private String lastName;
     private int age;
